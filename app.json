@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "monorepo_template_eqi",
+    "slug": "monorepo_template_eqi",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

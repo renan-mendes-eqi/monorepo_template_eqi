@@ -1,0 +1,7 @@
+{
+  "*.{ts,tsx}": [
+    "yarn eslint --ext .tsx --ext .ts --fix",
+    "yarn prettier --write",
+    "yarn test:staged"
+  ]
+}
