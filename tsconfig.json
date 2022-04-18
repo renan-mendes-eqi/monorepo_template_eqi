@@ -1,6 +1,8 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": false
+    "strict": true,
+    "noEmit": true, /* Do not emit outputs. */
+    "noImplicitAny": false,  /* Raise error on expressions and declarations with an implied 'any' type. */
   }
 }
