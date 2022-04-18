@@ -1,21 +1,21 @@
 import React from 'react';
-import { Box, Button } from 'native-base';
-import { useNavigation } from '@react-navigation/native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function Home(): JSX.Element {
-  const navigation = useNavigation();
+import { Box, Button, Flex } from 'native-base';
+import { useNavigation } from '@react-navigation/native';
+
+import { translate } from '../../locales';
+
+const Home: React.FC = () => {
+  const { navigate } = useNavigation();
 
   return (
-    <>
-      <Box>Im in Home noww</Box>
-      <Button
-        colorScheme="success"
-        onPress={() => navigation.navigate('Details')}
-      >
-        Go to Details
+    <Flex>
+      <Box>{translate('home.box')}</Box>
+      <Button colorScheme="success" onPress={() => navigate('Details')}>
+        {translate('home.button')}
       </Button>
-      <Ionicons name="md-checkmark-circle" size={32} color="green" />
-    </>
+    </Flex>
   );
-}
+};
+
+export { Home };

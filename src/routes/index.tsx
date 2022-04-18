@@ -1,17 +1,26 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '../screens/Home';
-import Details from '../screens/Details';
 
-const Stack = createNativeStackNavigator();
+import { Home } from '../screens/Home';
+import { Details } from '../screens/Details';
 
-const MainNavigation: React.FC = () => {
+import { RootStackParamList } from '../models/routes';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}
+
+const { Navigator, Screen } = createNativeStackNavigator();
+
+const Routes: React.FC = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Details" component={Details} />
-    </Stack.Navigator>
+    <Navigator initialRouteName="Home">
+      <Screen name="Home" component={Home} />
+      <Screen name="Details" component={Details} />
+    </Navigator>
   );
 };
 
-export default MainNavigation;
+export default Routes;

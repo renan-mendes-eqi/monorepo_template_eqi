@@ -1,6 +1,10 @@
 import React from 'react';
 import { Box } from 'native-base';
 
-export default function Details(): JSX.Element {
-  return <Box>Im in Details noww</Box>;
-}
+import { translate } from '../../locales';
+
+const Details: React.FC = () => {
+  return <Box>{translate('details.title')}</Box>;
+};
+
+export { Details };
