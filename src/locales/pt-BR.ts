@@ -6,4 +6,17 @@ export default {
   details: {
     title: 'Im in Details noww',
   },
+  fields: {
+    name: 'Name',
+    email: 'Emai',
+  },
+  validators: {
+    name: {
+      required: 'Name field is required',
+    },
+    email: {
+      valid: 'Insert a valid email',
+      required: 'Email field is required',
+    },
+  },
 };
